@@ -1,0 +1,565 @@
+@charset "utf-8";
+
+html {
+  font-size: 100%;/* 16px x 1 = 16px(=1rem) */
+}
+
+body {
+  background-color:#FFF;
+  color: #666;
+  font-size: 1rem;
+  line-height:1.8;
+  font-family: 'Noto Sans JP', sans-serif;
+  background: url("../images/bg_01.png") repeat left top;
+  z-index: -1;
+  -webkit-text-size-adjust: 100%;
+}
+input,textarea,button {
+  color: #666;
+  font-size: 1rem;
+  font-family: 'Noto Sans JP', sans-serif;
+}
+
+
+/*===============================================
+●PC 1025px以上(タブレット横以上)
+===============================================*/
+@media (min-width: 1025px) {
+    img {
+      max-width: 100%;
+      height: auto;
+      width /***/: auto;
+    }
+    #wrap {
+      width: 100%;
+    }
+}
+
+
+/*===============================================
+●タブレット 1024pxまで(タブレット縦まで)
+===============================================*/
+@media (max-width:1024px) {
+    img {
+      width: 100%;
+    }
+    html {
+      height: 100%;
+    }
+    body {
+      line-height: 1.6;
+      height: 100%;
+    }
+
+}
+
+
+/*===============================================
+●ipadより小さいサイズ 768pxまで
+===============================================*/
+@media (max-width:768px) {
+    body {
+        line-height: 2.0;
+    }
+}
+
+
+/*===============================================
+●スマホ 414pxまで
+===============================================*/
+@media (max-width: 414px) {
+    body {
+      line-height:1.4;
+      }
+}
+
+
+/*===============================
+ 画像下余白削除
+===============================*/
+img {
+  vertical-align:bottom;
+}
+
+
+/*===============================
+ margin
+===============================*/
+.mT10{ margin-top:10px !important; }
+.mT20{ margin-top:20px; }
+
+
+/*===============================
+ リンク
+===============================*/
+a:link,
+a:visited {
+  color:#0092d8;
+  text-decoration:none;
+  transition: all 0.4s ease-in-out;
+}
+
+a:hover,
+a:active {
+  color:#0092d8;
+  text-decoration: underline;
+}
+
+
+/*===============================
+ テキスト
+===============================*/
+.txtShadow_fff {
+text-shadow:2px 2px 2px #fff,0px 0px 3px  #fff,0px 0px 5px  #fff;
+}
+
+.ltSpace-4 {
+  letter-spacing: -4px;
+}
+
+.pcBr {
+  display: inline;
+}
+@media (max-width:768px) {
+    .pcBr {
+      display: none;
+    }
+}
+
+.spBr {
+  display: none;
+}
+@media (max-width:768px) {
+    .spBr {
+      display: inline;
+    }
+}
+
+
+/* ------------------------------
+ ロールオーバー
+------------------------------ 
+a.alpha:hover {opacity:0.5; filter:alpha(opacity=70); }
+*/
+
+
+/*===============================
+ clearfix
+===============================*/
+.clearfix:before,
+.clearfix:after {
+    content: " "; 
+    display: table; 
+}
+.clearfix:after {
+    clear: both;
+}
+
+/* For IE 6/7 only */
+.clearfix {
+    *zoom: 1;
+}
+
+
+/*===============================
+ 見出し
+===============================*/
+h3 {
+  font-size: 3.0rem;
+  line-height: 1.4;
+  color: #044565;
+  text-align: center;
+  text-shadow:2px 2px 2px #fff,0px 0px 3px  #fff,0px 0px 5px  #fff;
+  letter-spacing: 2px;
+}
+
+h3 .sub {
+  font-size: 1.0rem;
+  display: block;
+  font-weight: normal;
+}
+
+
+/*===============================
+ ボタン
+===============================*/
+.btn01 {
+  display:block;
+  box-sizing: border-box;
+  padding:10px;
+  background-color: #fff;
+  color: #0092d7;
+  border: 2px solid #0092d7;
+  border-radius: 30px;
+  text-align: center;
+  min-width: 200px;
+  max-width: 280px;
+}
+.btn01:hover {
+  background-color: #0092d7;
+  color: #fff;
+  text-decoration: none;
+}
+
+
+/*===============================
+ 基本frame
+===============================*/
+#contents {
+  width:100%;
+  position: relative;
+  z-index: 2;
+}
+@media (max-width:415px) {
+    #contents {
+      padding-top: 70px;
+    }
+}
+
+
+/*===============================
+ ヘッダー
+===============================*/
+header {
+  width: 100%;
+  position: fixed;
+  z-index: 50;
+  display: flex;
+  justify-content: space-between;
+}
+
+header h1 {
+  width:130px;
+  margin: 20px 0 0 20px;
+}
+@media (max-width:1024px) {
+    header h1 a {
+      width: 40vw;
+    }
+}
+@media (max-width:768px) {
+    header h1 a {
+      width: 234px;
+      height: 64.22px;
+    }
+}
+@media (max-width:414px) {
+    header h1 a {
+      width: 200px;
+      height: 54.9px;
+    }
+}
+
+/* お問合せボタン */
+header .btnContact01 {
+  width: 200px;
+  display:inline-block;
+  box-sizing: border-box;
+  padding: 5px 8px 7px;
+  text-align: center;
+  position: relative;
+  letter-spacing: 1px;
+  margin: 20px 20px 0;
+  box-shadow:3px 3px 2px -2px rgba(0,0,0,.2);
+  background-color: #ee8e8f;
+  border: 2px solid #ee8e8f;
+  border-radius: 30px;
+}
+header .btnContact01 .icoLetter {
+  width: 16px;
+  height: 12px;
+  stroke-width: 1.5px;
+  stroke: #fff;
+  stroke-linecap: round;
+  fill: transparent;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 30px;
+  transition: all 0.4s ease-in-out;
+}
+header .btnContact01:link,
+header .btnContact01:visited {
+  color:#fff;
+}
+header .btnContact01:hover,
+header .btnContact01:active {
+  color:#fff;
+  text-decoration:none;
+}
+header .btnContact01:hover,
+header .btnContact01:active {
+  background-color: #fff;
+  color: #ee8e8f;
+}
+header .btnContact01:hover .icoLetter,
+header .btnContact01:active .icoLetter {
+  stroke: #ee8e8f;
+}
+header .btnContact01 .txt {
+  padding-left: 10px;
+}
+@media (max-width:414px) {
+    header .btnContact01 {
+      width: 19vw;
+      height: 19vw;
+      border-radius: 50%;
+      text-align: center;
+      padding: 1vw;
+    }
+    header .btnContact01 .icoLetter {
+      width: 24px;
+      height: 16px;
+      position: static;
+      transform: none;
+      padding: 4vw 0 0;
+      display: block;
+      margin: 0 auto;
+    }
+    header .btnContact01 .txt {
+      padding: 2vw;
+      display: block;
+      font-size: .5rem;
+    }
+}
+
+
+/*===============================
+ 右サイド追随ナビ
+===============================*/
+.sideNav {
+  position: fixed;
+  right: 0;
+  top: 30%;
+  background-color: #fff;
+  box-shadow:-5px 4px 5px -4px rgba(0,0,0,.3);
+  padding: 20px;
+  font-size: 12px;
+  z-index: 50;
+}
+
+.sideNav a:link,
+.sideNav a:visited {
+  color: #999;
+}
+.sideNav a:hover,
+.sideNav a:active {
+  color: #0092d8;
+}
+.sideNav a.navsync-menu-highlight:link,
+.sideNav a.navsync-menu-highlight:visited {
+  color: #0092d8;
+}
+
+.sideNav li {
+  margin-bottom: 5px;
+  text-align: center;
+}
+.sideNav li:after {
+  content: "...";
+  display: block;
+  -webkit-writing-mode: vertical-rl;
+    -ms-writing-mode: tb-rl;
+        writing-mode: vertical-rl;
+  font-size: 20px;
+  margin-top: 5px;
+  color: #ccc;
+  position: relative;
+  right: -15px;
+  height: 17px;
+}
+.sideNav li:last-child {
+  margin-bottom: 0;
+}
+.sideNav li:last-child:after {
+  display: none;
+}
+.sideNav a {
+  position: relative;
+  display: inline-block;
+  text-decoration: none;
+}
+.sideNav a::after {
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  content: '';
+  width: 100%;
+  height: 2px;
+  background: #0092d8;
+  transform: scale(0, 1);
+  transform-origin: right top;
+  transition: transform .3s;
+}
+.sideNav a.navsync-menu-highlight:after {
+  transform: scale(1, 1);
+}
+
+@media (max-width:1024px) {
+    .sideNav {
+      display: none;
+    }
+}
+
+
+/*===============================
+ width変更ブロック
+===============================*/
+.inner1000px {
+  width:1000px;
+  margin:0 auto;
+}
+@media (max-width:1024px) {
+    .inner1000px {
+      width: 90%;
+    }
+}
+
+
+/*===============================
+ フッター
+===============================*/
+footer {
+  color: #fff;
+  text-align:center;
+  padding: 35px 0;
+  width: 100%;
+  text-shadow: none;
+}
+
+footer small {
+  display: inline-block;
+}
+
+
+/*===============================
+ Page Top
+===============================*/
+#topcontrol {
+  display: none;
+}
+@media (max-width:1024px) {
+    #topcontrol {
+      display: block;
+      z-index: 10;
+    }
+    #topcontrol:active {
+      background-color: rgba(118, 211, 255,.5);
+      border-radius: 10px;
+      transition: all .4s ease-in-out;
+    }
+}
+
+
+/*===============================
+ 送信完了画面
+===============================*/
+@media (max-height:460px) {
+    #wrap.thanks {
+      height: 100%;
+    }
+}
+.thanks #contents {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  background: -webkit-linear-gradient(top, rgba(252,252,252,.4) 1%,rgba(94,208,214,.4) 45%,rgba(0,146,215,.4) 100%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to bottom, rgba(252,252,252,.4) 1%,rgba(94,208,214,.4) 20%,rgba(0,146,215,.4) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+   padding-top:0;
+  position: fixed;
+  top: 0;
+  left:0;
+}
+@media (max-height:460px) {
+    .thanks #contents {
+      position: static;
+      padding: 50px 0;
+    }
+}
+
+.thanks .thanksCard {
+  padding: 10vw;
+  color: #fff;
+  text-shadow: 2px 2px 2px #044565, 0px 0px 3px #044565, 0px 0px 5px #044565;
+}
+@media (max-height:460px) {
+    .thanks .thanksCard {
+      padding: 0 5vw 5vw;
+    }
+}
+
+.thanks .thanksCard .img_thanks_01 {
+  width: 24vw;
+  height: 5.6vw;
+  fill: #fff;
+  stroke:#fff;
+  fill-opacity: 0;
+  display: block;
+  margin: 0 auto;
+}
+
+@media (max-width:1024px) {
+      .thanks .thanksCard .img_thanks_01 {
+      width: 56vw;
+      height: 13vw;
+      }
+}
+@media (max-height:460px) {
+      .thanks .thanksCard .img_thanks_01 {
+      width: 24vw;
+      height: 5.6vw;
+      }
+}
+
+.thanks .thanksCard h4 {
+  font-size: 1.6rem;
+  font-weight: 500;
+  margin-top: 20px;
+  color: #044565;
+  display: inline-block;
+}
+.thanks .thanksCard h4 .txt {
+  background:rgba(0, 0, 0, 0) linear-gradient(transparent 60%, #ffffbc 0%) repeat scroll 0 0;
+  text-shadow:0px -1px 1px #fff,0px -2px 1px #fff,0px -2px 1px #fff;
+}
+
+.thanks .thanksCard .txt01 {
+  margin-top: 20px;
+  font-size:.8rem; 
+}
+.thanks .thanksCard .txt01 + .txt01 {
+  margin-top: 10px;
+}
+@media (max-height:460px) {
+    .thanks .thanksCard .txt01 + .txt01 {
+      margin-top: 0;
+    }
+}
+
+.thanks .thanksCard .btn01 {
+  margin: 40px auto 0;
+  text-shadow: none;
+}
+@media (max-height:460px) {
+    .thanks .thanksCard .btn01 {
+      margin-top: 20px;
+    }
+}
+
+.thanks footer {
+  position: fixed;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+@media (max-height:460px) {
+    .thanks footer {
+      position: static;
+      transform: none;
+      padding: 0;
+    }
+}
