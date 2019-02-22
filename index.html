@@ -55,7 +55,7 @@
 <link href="https://fonts.googleapis.com/css?family=Noto+Sans+JP:400,500,700&amp;subset=japanese" rel="stylesheet">
 <script type="text/javascript" src="common/js/formrun_ie11.js"></script>
 <script src="https://sdk.form.run/js/v2/formrun.js"></script>
-<script src="https://www.google.com/recaptcha/api.js?render=6LdjYpIUAAAAAJFGPJ5GSp41jRVpv5MIZiLcQF5e"></script>
+<script src="https://www.google.com/recaptcha/api.js" async defer></script>
 </head>
 
 <body>
@@ -336,7 +336,9 @@
               <div data-formrun-show-if-error="お問い合わせ">お問い合わせ内容を入力してください</div>
             </div>
           </li>
-
+          <li>
+            <div class="g-recaptcha" data-sitekey="6LfgK5MUAAAAAHajJGpoyg067GKuqlkozfA8LmuD"></div>
+          </li>
           <!-- ボット投稿をブロックするためのタグ -->
           <li class="_formrun_gotcha">
             <style media="screen">._formrun_gotcha {position:absolute!important;height:1px;width:1px;overflow:hidden;}</style>
@@ -397,28 +399,5 @@ $(document).scroll(function(){
  window.scrollTo(0, csp - wd);
  });
  }
-</script>
-<script>
-function onSubmit(event) {
-  var formElement = this;
-  grecaptcha.ready(function() {
-    grecaptcha.execute('6LdjYpIUAAAAAJFGPJ5GSp41jRVpv5MIZiLcQF5e', {action: 'homepage'})
-    .then(function(token) {
-      var hidden = document.createElement('input')
-      hidden.setAttribute('type', 'hidden')
-      hidden.setAttribute('name', 'g-recaptcha-response')
-      hidden.setAttribute('value', token)
-      formElement.insertAdjacentElement('beforeend', hidden)
-      formElement.submit()
-    }, function(reason) {
-      alert('エラーが発生しました。お手数ですが再度お試しください')
-    })
-  })
-  event.preventDefault()
-}
-window.addEventListener('load', function() {
-  var form = document.querySelector('.formrun')
-  form.addEventListener('submit', onSubmit, false);
-})
 </script>
 </body></html>
