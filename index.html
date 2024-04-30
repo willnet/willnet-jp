@@ -53,7 +53,6 @@
 
 <link rel="stylesheet" href="common/css/import.css" type="text/css" media="all" />
 <link href="https://fonts.googleapis.com/css?family=Noto+Sans+JP:400,500,700&amp;subset=japanese" rel="stylesheet">
-<script type="text/javascript" src="common/js/formrun_ie11.js"></script>
 <script src="https://sdk.form.run/js/v2/formrun.js"></script>
 <script src="https://www.google.com/recaptcha/api.js" async defer></script>
 </head>
@@ -390,17 +389,5 @@ $(document).scroll(function(){
     $('#wrap').removeClass('blur');
   }
 });
-</script>
-
-<!-- ie11での固定背景画像スムース化 -->
-<script>
- if(navigator.userAgent.match(/MSIE 10/i) || navigator.userAgent.match(/Trident\/7\./) || navigator.userAgent.match(/Edge\/12\./)) {
- $('body').on("mousewheel", function () {
- event.preventDefault();
- var wd = event.wheelDelta;
- var csp = window.pageYOffset;
- window.scrollTo(0, csp - wd);
- });
- }
 </script>
 </body></html>
