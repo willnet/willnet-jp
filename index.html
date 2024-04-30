@@ -381,13 +381,13 @@
 
 <!-- 500スクロール後blur -->
 <script type="text/javascript">
-$(document).scroll(function(){
-  var st = $(document).scrollTop()
-  if ($(document).scrollTop() > 500) {
-    $('#wrap').addClass('blur');
-  } else {
-    $('#wrap').removeClass('blur');
-  }
-});
+  window.addEventListener('scroll', function() {
+    var st = window.pageYOffset || document.documentElement.scrollTop;
+    if (st > 500) {
+      document.getElementById('wrap').classList.add('blur');
+    } else {
+      document.getElementById('wrap').classList.remove('blur');
+    }
+  });
 </script>
 </body></html>
