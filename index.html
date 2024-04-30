@@ -372,10 +372,8 @@
 <script type="text/javascript" src="common/js/scrolltopcontrol.js"></script>
 <script type="text/javascript" src="common/js/navsync.min.js"></script>
   <script>
-    $(function () {
-      $(window).load(function () {
-        $("nav").navSync();
-      });
+    $(window).on("load", function () {
+      $("nav").navSync();
     });
   </script>
 
